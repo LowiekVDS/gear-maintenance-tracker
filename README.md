@@ -1,91 +1,50 @@
-<picture>
-    <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_Solid_White.svg" media="(prefers-color-scheme: dark)">
-    <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo">
-</picture>
+# Welcome to your Expo app 👋
 
-# Leptos Axum Starter Template
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-This is a template for use with the [Leptos](https://github.com/leptos-rs/leptos) web framework and the [cargo-leptos](https://github.com/akesson/cargo-leptos) tool using [Axum](https://github.com/tokio-rs/axum).
+## Get started
 
-## Creating your template repo
+1. Install dependencies
 
-If you don't have `cargo-leptos` installed you can install it with
+   ```bash
+   npm install
+   ```
 
-```bash
-cargo install cargo-leptos --locked
-```
+2. Start the app
 
-Then run
-```bash
-cargo leptos new --git https://github.com/leptos-rs/start-axum
-```
+   ```bash
+   npx expo start
+   ```
 
-to generate a new project template.
+In the output, you'll find options to open the app in a
 
-```bash
-cd gear-maintenance-tracker
-```
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-to go to your newly created project.
-Feel free to explore the project structure, but the best place to start with your application code is in `src/app.rs`.
-Additionally, Cargo.toml may need updating as new versions of the dependencies are released, especially if things are not working after a `cargo update`.
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Running your project
+## Get a fresh project
+
+When you're ready, run:
 
 ```bash
-cargo leptos watch
+npm run reset-project
 ```
 
-## Installing Additional Tools
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-By default, `cargo-leptos` uses `nightly` Rust, `cargo-generate`, and `sass`. If you run into any trouble, you may need to install one or more of these tools.
+## Learn more
 
-1. `rustup toolchain install nightly --allow-downgrade` - make sure you have Rust nightly
-2. `rustup target add wasm32-unknown-unknown` - add the ability to compile Rust to WebAssembly
-3. `cargo install cargo-generate` - install `cargo-generate` binary (should be installed automatically in future)
-4. `npm install -g sass` - install `dart-sass` (should be optional in future
-5. Run `npm install` in end2end subdirectory before test
+To learn more about developing your project with Expo, look at the following resources:
 
-## Compiling for Release
-```bash
-cargo leptos build --release
-```
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-Will generate your server binary in target/release and your site package in target/site
+## Join the community
 
-## Testing Your Project
-```bash
-cargo leptos end-to-end
-```
+Join our community of developers creating universal apps.
 
-```bash
-cargo leptos end-to-end --release
-```
-
-Cargo-leptos uses Playwright as the end-to-end test tool.
-Tests are located in end2end/tests directory.
-
-## Executing a Server on a Remote Machine Without the Toolchain
-After running a `cargo leptos build --release` the minimum files needed are:
-
-1. The server binary located in `target/server/release`
-2. The `site` directory and all files within located in `target/site`
-
-Copy these files to your remote server. The directory structure should be:
-```text
-gear-maintenance-tracker
-site/
-```
-Set the following environment variables (updating for your project as needed):
-```sh
-export LEPTOS_OUTPUT_NAME="gear-maintenance-tracker"
-export LEPTOS_SITE_ROOT="site"
-export LEPTOS_SITE_PKG_DIR="pkg"
-export LEPTOS_SITE_ADDR="127.0.0.1:3000"
-export LEPTOS_RELOAD_PORT="3001"
-```
-Finally, run the server binary.
-
-## Licensing
-
-This template itself is released under the Unlicense. You should replace the LICENSE for your own application with an appropriate license if you plan to release it publicly.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
